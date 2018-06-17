@@ -18,14 +18,14 @@
                     <div class="col-md-12"></div>
                     <div class="form-group col-md-12">
                         <label for="name">{{trans('seatgroups::seat.seat_groups_name')}}</label>
-                        <input type="text" class="form-control" name="name" placeholder="SeAT-Group Name">
+                        <input type="text" class="form-control" name="name" placeholder="Company/MOS Name">
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-12"></div>
                     <div class="form-group col-md-12">
                         <label for="description">{{trans('seatgroups::seat.seat_groups_description')}}</label>
-                        <textarea type="text" class="form-control" rows="5" name="description" placeholder="SeAT-Group Description"></textarea>
+                        <textarea type="text" class="form-control" rows="5" name="description" placeholder="Company Description"></textarea>
                     </div>
                 </div>
                 <!-- TODO: use data-icon-->
@@ -87,7 +87,7 @@
 
             <script>
               $("#available_roles").select2({
-                placeholder: "{{ trans('web::seat.select_item_add') }}"
+                placeholder: "Seat Role"
               });
             </script>
 
