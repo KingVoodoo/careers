@@ -13,7 +13,7 @@ please do report any findings to seat-slack and report it as an issue*
 ## Installation
 
 1. cd to `/var/www/seat`
-2. enter `composer require herpaderpaldent/seat-groups`
+2. enter `composer require KingVoodoo/careers`
 3. Publish `php artisan vendor:publish --force --all`
 4. run migration `php artisan migrate`
 
@@ -28,11 +28,11 @@ please do report any findings to seat-slack and report it as an issue*
 ### auto group
 Members of set corporation are getting assigned the corresponding roles
 
-### opt-in group
+### A.L.O.T.S
 Members of set corporation can opt-in into a seat group and get then assigned
 the corresponding roles
 
-### managed groups
+### Omega Careers
 Members may apply for these groups. Managers may accept or deny the application
 ![Managed](https://i.imgur.com/mYB30rZ.png)
 
