@@ -23,7 +23,7 @@
             @if($seatgroup->type === 'auto')
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        <h3 class="panel-title pull-left">{{$seatgroup->name}}</h3>
+                        <h3 class="panel-title pull-left"><img src="https://i.gyazo.com/188439c763f2b11bd87be0a3357d0eb8.png" alt="logo" height="60" width="60">{{$seatgroup->name}}</h3>
 
                         <button class="btn btn-link pull-right">
                             @if(Auth::user()->hasRole('seatgroups.edit'))
@@ -33,12 +33,24 @@
                         <div class="clearfix"></div>
                     </div>
                     <div class="panel-body">
-                        {{$seatgroup->description}}
+                    <textarea type="text" class="form-control" rows="7" name="description" readonly="readonly"skillplan >{{$seatgroup->description}}</textarea>
                     </div>
                 </div>
             @endif
         @endforeach
-
+        <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title pull-left"><img src="https://i.gyazo.com/188439c763f2b11bd87be0a3357d0eb8.png" alt="logo" height="60" width="60">Video</h3>
+                      
+                        <div class="clearfix"></div>
+        <div class="panel panel-default">
+        <div class="panel-body">
+        <iframe width="100%" height="300" src="https://www.youtube.com/embed/LNUu75fH8Uc" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            </div>
+        </div> 
+        </div>
+        </div> 
+        
 
 
 @endsection
@@ -56,7 +68,7 @@
         @if($seatgroup->type === 'open')
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    <h3 class="panel-title pull-left">{{$seatgroup->name}}</h3>
+                    <h3 class="panel-title pull-left"><img src="https://i.gyazo.com/188439c763f2b11bd87be0a3357d0eb8.png" alt="logo" height="60" width="60">{{$seatgroup->name}}</h3>
 
                     @if(Auth::user()->hasRole('seatgroups.edit'))
                         <button class="btn btn-link pull-right">
@@ -67,7 +79,13 @@
                     <div class="clearfix"></div>
                 </div>
                 <div class="panel-body">
-                    {{$seatgroup->description}}
+                <div class="form-group col-md-12">
+                        <label for="skillplan">{{trans('seatgroups::seat.seat_groups_skillplan')}}</label>
+                        <i>- Train or inject these skills on your ALOT Character</i>
+                        <textarea type="text" class="form-control" rows="7" name="description" readonly="readonly"skillplan >{{$seatgroup->description}}</textarea>
+                        <sub>Click, CTRL+A,CTRL+C Import in Character Sheet</sub>
+                        </div>
+                    
 
                         @if(!$seatgroup->isMember())
                             {!! Form::open(['method' => 'POST',
@@ -107,7 +125,7 @@
       @if($seatgroup->type === 'managed')
         <div class="panel panel-default">
             <div class="panel-heading">
-                <h3 class="panel-title pull-left">{{$seatgroup->name}}</h3>
+                <h3 class="panel-title pull-left"><img src="https://i.gyazo.com/188439c763f2b11bd87be0a3357d0eb8.png" alt="logo" height="60" width="60">{{$seatgroup->name}}</h3>
 
 
               @if(Auth::user()->hasRole('seatgroups.edit'))
@@ -119,7 +137,8 @@
                 <div class="clearfix"></div>
             </div>
             <div class="panel-body">
-                {{$seatgroup->description}} <br>
+            <textarea type="text" class="form-control" rows="7" name="description" readonly="readonly"skillplan >{{$seatgroup->description}}</textarea>
+                <br>
                 Members: {{$seatgroup->member->map(function($group) { return $group->main_character->name;})->implode(', ')}}
 
 
@@ -222,7 +241,7 @@
       @if($seatgroup->type === 'hidden')
         <div class="panel panel-default">
           <div class="panel-heading">
-            <h3 class="panel-title pull-left">{{$seatgroup->name}}</h3>
+            <h3 class="panel-title pull-left"><img src="https://i.gyazo.com/188439c763f2b11bd87be0a3357d0eb8.png" alt="logo" height="60" width="60">{{$seatgroup->name}}</h3>
 
             <button class="btn btn-link pull-right">
               @if(Auth::user()->hasRole('seatgroups.edit'))
